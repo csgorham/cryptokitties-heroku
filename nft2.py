@@ -48,7 +48,7 @@ if endpoint == 'Model':
 if endpoint == 'Pricing':
 	ids = st.sidebar.selectbox('ID token', modelresults['ID_token'].sort_values().tolist())
 	idx = modelresults[(modelresults['ID_token'] == ids)].index
-	asset = modelresults[idx]
+	asset = modelresults.iloc[idx]
 	render_asset(asset)
 
 
