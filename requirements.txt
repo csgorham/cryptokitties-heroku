@@ -3,3 +3,6 @@ yfinance
 plotly
 pandas
 alpha_vantage
+web3
+requests
+json
