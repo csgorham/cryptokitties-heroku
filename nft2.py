@@ -11,9 +11,9 @@ data = {'assets':[]}
 modelresults=pd.read_csv("./results.csv")
 
 def render_asset(asset):
-	st.write('Cryptokitty   ID: ' + str(list(asset['ID_token'])))
+	st.write('Cryptokitty   ID: ' + list(asset['ID_token'])
 	st.image(list(asset["image_url_png"]))
-	st.write(str(asset["image_url_png"]))
+	st.write('Mouth Type: ' + list(asset['mouth_value'])  + 'Rarity: ' + list(asset['mouth_rarity']) )
 
 endpoint = st.sidebar.selectbox("Navigation", [ "Model", "Pricing" ], index = 1) 
 st.header(f"Cryptokitties NFT Explorer: {endpoint}")
@@ -47,7 +47,7 @@ if endpoint == 'Model':
 
 
 if endpoint == 'Pricing':
-	ids = st.sidebar.selectbox('ID token', modelresults['ID_token'].sort_values().tolist())
+	ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
 	idx = modelresults[(modelresults['ID_token'] == ids)].index
 	asset = modelresults.iloc[idx]
 	render_asset(asset)
