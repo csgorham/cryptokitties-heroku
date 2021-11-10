@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run app_finance.py
+web: sh setup.sh && streamlit run nft.py
