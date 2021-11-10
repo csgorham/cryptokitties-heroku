@@ -12,7 +12,8 @@ modelresults=pd.read_csv("./results.csv")
 
 def render_asset(asset):
 	st.write('Cryptokitty   ID: ' + str(asset['ID_token']))
-	st.image(asset["image_url_png"])
+	#st.image(asset["image_url_png"])
+	st.write(str(asset["image_url_png"]))
 
 endpoint = st.sidebar.selectbox("Navigation", [ "Model", "Pricing" ], index = 1) 
 st.header(f"Cryptokitties NFT Explorer: {endpoint}")
