@@ -4,4 +4,3 @@ plotly
 pandas
 alpha_vantage
 web3
-json
