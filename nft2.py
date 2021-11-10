@@ -11,13 +11,8 @@ data = {'assets':[]}
 modelresults=pd.read_csv("./results.csv")
 
 def render_asset(asset):
-        if asset['name']:
-                st.write('Cryptokitty   ID: ' + asset['ID_token'])
-        else:
-        if asset['image_url_png'].endswith('mp4') or asset['image_url_png'].endswith('mov'):
-                st.video(asset['image_url_png'])
-        else:
-                st.image(asset["image_url_png"])
+	st.write('Cryptokitty   ID: ' + asset['ID_token'])
+	st.image(asset["image_url_png"])
 
 endpoint = st.sidebar.selectbox("Navigation", [ "Model", "Pricing" ], index = 3) 
 st.header(f"Cryptokitties NFT Explorer: {endpoint}")
