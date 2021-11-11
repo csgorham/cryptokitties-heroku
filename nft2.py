@@ -11,7 +11,7 @@ data = {'assets':[]}
 modelresults=pd.read_csv("./results.csv")
 
 def render_asset(asset):
-	st.write('Cryptokitty   ID: ' + list(asset['ID_token']))
+	st.write('Cryptokitty   ID: ' + list(asset['ID_token'].astype(str)))
 	st.image(list(asset["image_url_png"]))
 	st.write('Mouth Type: ' + list(asset['mouth_value'])  + 'Rarity: ' + list(asset['mouth_rarity']) )
 
