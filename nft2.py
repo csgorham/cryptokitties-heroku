@@ -16,7 +16,7 @@ def render_asset(asset):
 	st.write(list(asset["image_url_png"]))
 	st.write('Mouth Type: ' + asset['mouth_value']  + '   Rarity: ' + asset['mouth_rarity'].astype(str) )
 
-endpoint = st.sidebar.selectbox("Navigation", [ "Model", "Price Arbitrage" ], index = 1) 
+endpoint = st.sidebar.selectbox("Navigation", [ "Model", "Price Arbitrage" ], index = 0) 
 
 
 if endpoint == 'Model':
@@ -37,22 +37,22 @@ Having achieved a reasonably high degree of accuracy, we suggest looking at wher
 
 	st.subheader(f"Generation 0")
 
-	st.markdown("""We have decided to focus on Generation 0 kitties since they are considered the most valuable and are valued as a cryptocurrency in their own right, on account of their generation being the only one with a capped number of cats at 50,000. This makes them particularly rare, and in demand. 
+	st.markdown("""We have decided to focus on Generation 0 kitties since they are considered the most valuable and are valued as a cryptocurrency in their own right, on account of their generation being the only one with a capped number of cats at 50,000. This makes them particularly rare, and in demand. """)
 
-** Cattribute Rarity, Cooldown and Exclusives** 
+        st.subheader(f"Cattribute Rarity, Cooldown and Exclusive Cats")
 
-Being an NFT, which is a unit of data stored on the blockchain that certifies a digital asset to be unique and not interchangeable, each cat has its own set of ‘cat attributes’ or ‘cattributes.’ Cattributes describe physical features of the virtual cats, such as: fur type, pattern, eye color and shape, background color, mouth style, eyebrows and even mood. Each attribute has a different frequency of realization within each generation of collection, and the combination of them are indicative of the rarity of the NFT. 
+	st.markdown("""Being an NFT, which is a unit of data stored on the blockchain that certifies a digital asset to be unique and not interchangeable, each cat has its own set of ‘cat attributes’ or ‘cattributes.’ Cattributes describe physical features of the virtual cats, such as: fur type, pattern, eye color and shape, background color, mouth style, eyebrows and even mood. Each attribute has a different frequency of realization within each generation of collection, and the combination of them are indicative of the rarity of the NFT. 
 
 We calculate the overall rarity of each kitty as a sum of the rarities of each trait. For instance, there is only one kitty in Generation 0 with ‘Manx’ fur and that component of rarity is 1/50,000.
 
 Other factors that contribute to the value of a cryptokitty are instances where the cat is “Special Edition” “Exclusive” or “Fancy.” While the appearance of “Normal Cats” is based on genetic cattributes, “Fancy Cats” are limited edition CryptoKitties with special artwork that are created by finding a particular genetic recipe. “Exclusives” are the rarest cats that are released to commemorate special events, and “Special Editions” are similar to “Exclusives” but are released in larger numbers.
 
-A final factor in assessing the value of a cryptokitty is what is known as its “cooldown period.” This is the period of time that it will take a particular cat to recover after breeding, to breed again. “Virgin” cats are highly valued, since each time that a cat breeds its “cooldown period” becomes longer. 
+A final factor in assessing the value of a cryptokitty is what is known as its “cooldown period.” This is the period of time that it will take a particular cat to recover after breeding, to breed again. “Virgin” cats are highly valued, since each time that a cat breeds its “cooldown period” becomes longer. """)
 
 
-** Project Description** 
+	st.subheader(f"Project Description") 
 
-Data Ingestion:  
+	st.markdown(""" **Data Ingestion:**  
 
 (1)	Sale price and NFT trait information has been collected using the OpenSea API Asset request function.
 
@@ -60,20 +60,25 @@ Data Ingestion:
 
 (3)	Cattribute rarity has been scraped from the KittyHelper website.
 
-Machine Learning Model:
+** Machine Learning Model:**
 
 Random Forest Regression (RFR), from the sklearn toolkit, has been chosen to perform price prediction on the set of all generation-0 kitties (currently 36,258 exist). Random Forest is a supervised learning algorithm that operates by constructing multiple decision trees and outputting the mean prediction of the individual trees. Thanks to weighting multiple decision trees, RFR achieves high accuracies and generally produces better results than linear regression models or single decision trees.
 
-•	RandomSearchCV and GridSearchCV have been utilized to find the optimized RFR hyperparameters:  n_estimators=170, min_samples_split=20, min_samples_leaf=6, max_features=auto, max_depth=101, bootstrap=True, oob_score=False.
+•	RandomSearchCV and GridSearchCV have been utilized to find the optimized RFR hyperparameters:  n_estimators=170, min_samples_split=20, min_samples_leaf=6, max_features=auto, max_depth=101, bootstrap=True, oob_score=False.""")
+
+	st.image('./graphics/pipe.png')
 
 
-Model Validation and Results: 
+	st.subheader(f"Model Validation and Results:") 
 
-•	Important features_
+	st.markdown("** Feature Importance**")
+	#st.image(list(asset["image_url_png"]))
 
-•	Y_pred vs y_actual   R2 score
+	st.markdown("** R2 Score**")
+	#st.image(list(asset["image_url_png"]))
 
-•	Oversold and undersold vs rarity """)
+	st.markdown("** Oversold/Undersold vs. Rarity**")
+	#st.image(list(asset["image_url_png"]))
 
 
 
