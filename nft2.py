@@ -17,29 +17,27 @@ def render_asset(asset):
 	st.write('Mouth Type: ' + asset['mouth_value']  + '   Rarity: ' + asset['mouth_rarity'].astype(str) )
 
 endpoint = st.sidebar.selectbox("Navigation", [ "Model", "Price Arbitrage" ], index = 1) 
-st.header(f"Cryptokitties NFT Explorer: {endpoint}")
 
 
 if endpoint == 'Model':
-	st.sidebar.subheader("Filters")
-	collection = st.sidebar.text_input("Collection", value='the-wanderers')
-	owner = st.sidebar.text_input("Owner")
+
+	st.header(f"Introduction")
 
 	st.markdown("""Non-fungible tokens (NFTs) are a modern digital investment vehicle based on the Ethereum blockchain. These assets have been a thing for a while now, but many of us are just catching on – and wondering what is driving the prices sky-high. NFTs, sold on online marketplaces (a most common one being OpenSea Marketplace), are organized into collections which fall into a variety of categories including art, collectible, games, metaverse, and utility. 
 
 The most popular NFT collection (by number of assets) is known as ‘CryptoKitties’ – a collection of artistic images of virtual cats that are used in a game on Ethereum that allows players to purchase, collect and breed their virtual cats. Since gaining in popularity in 2017, the total volume exchanged daily has grown to $10 million dollars in March 2021. 
 
-All CryptoKitties belong to a particular ‘generation,’ those that were “magically” created belong to Generation 0 – any new CryptoKitty NFTs are created by breeding and belong  to “Generation +1” of the oldest parent. There are currently over 2 million cats with the highest generation of 4593. 
+All CryptoKitties belong to a particular ‘generation,’ those that were “magically” created belong to Generation 0 – any new CryptoKitty NFTs are created by breeding and belong  to “Generation +1” of the oldest parent. There are currently over 2 million cats with the highest generation of 4593. """)
 
-**Business Objective**
+	st.subheader(f"Business Objective ")
 
-This machine learning project focuses on the price prediction of individual Generation 0 CryptoKitties. I have developed a model to predict the price of virtual cats that have been previously sold, based on factors including the rarity of their attributes and their age (token ID). 
+	st.markdown("""This machine learning project focuses on the price prediction of individual Generation 0 CryptoKitties. I have developed a model to predict the price of virtual cats that have been previously sold, based on factors including the rarity of their attributes and their age (token ID). 
 
-Having achieved a reasonably high degree of accuracy, we suggest looking at where the model has over-predicted or under-predicted the price as special cases that lend themselves to arbitrage (buying under-priced assets and subsequently marking them up, and vice versa – selling over-priced assets prior to their presumed loss of value).
+Having achieved a reasonably high degree of accuracy, we suggest looking at where the model has over-predicted or under-predicted the price as special cases that lend themselves to arbitrage (buying under-priced assets and subsequently marking them up, and vice versa – selling over-priced assets prior to their presumed loss of value).""")
 
-** Generation 0 ** 
+	st.subheader(f"Generation 0")
 
-We have decided to focus on Generation 0 kitties since they are considered the most valuable and are valued as a cryptocurrency in their own right, on account of their generation being the only one with a capped number of cats at 50,000. This makes them particularly rare, and in demand. 
+	st.markdown("""We have decided to focus on Generation 0 kitties since they are considered the most valuable and are valued as a cryptocurrency in their own right, on account of their generation being the only one with a capped number of cats at 50,000. This makes them particularly rare, and in demand. 
 
 ** Cattribute Rarity, Cooldown and Exclusives** 
 
