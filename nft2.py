@@ -25,7 +25,7 @@ if endpoint == 'Model':
 	collection = st.sidebar.text_input("Collection", value='the-wanderers')
 	owner = st.sidebar.text_input("Owner")
 
-        st.markdown('Non-fungible tokens (NFTs) are a modern digital investment vehicle based on the Ethereum blockchain. These assets have been a thing for a while now, but many of us are just catching on – and wondering what is driving the prices sky-high. NFTs, sold on online marketplaces (a most common one being OpenSea Marketplace), are organized into collections which fall into a variety of categories including art, collectible, games, metaverse, and utility. 
+	st.markdown('Non-fungible tokens (NFTs) are a modern digital investment vehicle based on the Ethereum blockchain. These assets have been a thing for a while now, but many of us are just catching on – and wondering what is driving the prices sky-high. NFTs, sold on online marketplaces (a most common one being OpenSea Marketplace), are organized into collections which fall into a variety of categories including art, collectible, games, metaverse, and utility. 
 
 The most popular NFT collection (by number of assets) is known as ‘CryptoKitties’ – a collection of artistic images of virtual cats that are used in a game on Ethereum that allows players to purchase, collect and breed their virtual cats. Since gaining in popularity in 2017, the total volume exchanged daily has grown to $10 million dollars in March 2021. 
 
@@ -66,7 +66,7 @@ Machine Learning Model:
 
 Random Forest Regression (RFR), from the sklearn toolkit, has been chosen to perform price prediction on the set of all generation-0 kitties (currently 36,258 exist). Random Forest is a supervised learning algorithm that operates by constructing multiple decision trees and outputting the mean prediction of the individual trees. Thanks to weighting multiple decision trees, RFR achieves high accuracies and generally produces better results than linear regression models or single decision trees.
 
-•	RandomSearchCV and GridSearchCV have been utilized to find the optimized RFR hyperparameters:  n_estimators=170, min_samples_split=20, min_samples_leaf=6, max_features='auto', max_depth=101, bootstrap=True, oob_score=False.
+•	RandomSearchCV and GridSearchCV have been utilized to find the optimized RFR hyperparameters:  n_estimators=170, min_samples_split=20, min_samples_leaf=6, max_features=auto, max_depth=101, bootstrap=True, oob_score=False.
 
 
 Model Validation and Results: 
