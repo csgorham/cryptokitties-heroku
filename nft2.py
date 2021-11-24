@@ -39,7 +39,7 @@ Having achieved a reasonably high degree of accuracy, we suggest looking at wher
 
 	st.markdown("""We have decided to focus on Generation 0 kitties since they are considered the most valuable and are valued as a cryptocurrency in their own right, on account of their generation being the only one with a capped number of cats at 50,000. This makes them particularly rare, and in demand. """)
 
-        st.subheader(f"Cattribute Rarity, Cooldown and Exclusive Cats")
+	st.subheader(f"Cattribute Rarity, Cooldown and Exclusive Cats")
 
 	st.markdown("""Being an NFT, which is a unit of data stored on the blockchain that certifies a digital asset to be unique and not interchangeable, each cat has its own set of ‘cat attributes’ or ‘cattributes.’ Cattributes describe physical features of the virtual cats, such as: fur type, pattern, eye color and shape, background color, mouth style, eyebrows and even mood. Each attribute has a different frequency of realization within each generation of collection, and the combination of them are indicative of the rarity of the NFT. 
 
