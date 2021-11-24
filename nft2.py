@@ -50,19 +50,21 @@ Other factors that contribute to the value of a cryptokitty are instances where 
 A final factor in assessing the value of a cryptokitty is what is known as its “cooldown period.” This is the period of time that it will take a particular cat to recover after breeding, to breed again. “Virgin” cats are highly valued, since each time that a cat breeds its “cooldown period” becomes longer. """)
 
 
-	st.subheader(f"Project Description") 
+	st.header(f"Project Description") 
 
-	st.markdown(""" **Data Ingestion:**  
+	st.subheader(""" **Data Ingestion:**  """)
 
-(1)	Sale price and NFT trait information has been collected using the OpenSea API Asset request function.
+	st.markdown("""(1)	Sale price and NFT trait information has been collected using the OpenSea API Asset request function.
 
 (2)	Additional cattributes have been collected from KittyHelper API.
 
-(3)	Cattribute rarity has been scraped from the KittyHelper website.
+(3)	Cattribute rarity has been scraped from the KittyHelper website. """)
 
-** Machine Learning Model:**
+	st.image('./graphics/cleaned_data.png')
 
-Random Forest Regression (RFR), from the sklearn toolkit, has been chosen to perform price prediction on the set of all generation-0 kitties (currently 36,258 exist). Random Forest is a supervised learning algorithm that operates by constructing multiple decision trees and outputting the mean prediction of the individual trees. Thanks to weighting multiple decision trees, RFR achieves high accuracies and generally produces better results than linear regression models or single decision trees.
+	st.subheader("""** Machine Learning Model:**""")
+
+	st.markdown("""Random Forest Regression (RFR), from the sklearn toolkit, has been chosen to perform price prediction on the set of all generation-0 kitties (currently 36,258 exist). Random Forest is a supervised learning algorithm that operates by constructing multiple decision trees and outputting the mean prediction of the individual trees. Thanks to weighting multiple decision trees, RFR achieves high accuracies and generally produces better results than linear regression models or single decision trees.
 
 •	RandomSearchCV and GridSearchCV have been utilized to find the optimized RFR hyperparameters:  n_estimators=170, min_samples_split=20, min_samples_leaf=6, max_features=auto, max_depth=101, bootstrap=True, oob_score=False.""")
 
