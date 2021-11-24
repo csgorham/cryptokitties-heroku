@@ -75,11 +75,10 @@ Random Forest Regression (RFR), from the sklearn toolkit, has been chosen to per
 	#st.image(list(asset["image_url_png"]))
 
 	st.markdown("** R2 Score**")
-	#st.image(list(asset["image_url_png"]))
+	st.image('./graphics/R2.png')
 
 	st.markdown("** Oversold/Undersold vs. Rarity**")
-	#st.image(list(asset["image_url_png"]))
-
+	st.image('./graphics/overallrarityVSprediction.png')
 
 
 if endpoint == 'Price Arbitrage':
