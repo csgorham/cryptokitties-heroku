@@ -25,7 +25,7 @@ if endpoint == 'Model':
 	collection = st.sidebar.text_input("Collection", value='the-wanderers')
 	owner = st.sidebar.text_input("Owner")
 
-	st.markdown('Non-fungible tokens (NFTs) are a modern digital investment vehicle based on the Ethereum blockchain. These assets have been a thing for a while now, but many of us are just catching on – and wondering what is driving the prices sky-high. NFTs, sold on online marketplaces (a most common one being OpenSea Marketplace), are organized into collections which fall into a variety of categories including art, collectible, games, metaverse, and utility. 
+	st.markdown("""Non-fungible tokens (NFTs) are a modern digital investment vehicle based on the Ethereum blockchain. These assets have been a thing for a while now, but many of us are just catching on – and wondering what is driving the prices sky-high. NFTs, sold on online marketplaces (a most common one being OpenSea Marketplace), are organized into collections which fall into a variety of categories including art, collectible, games, metaverse, and utility. 
 
 The most popular NFT collection (by number of assets) is known as ‘CryptoKitties’ – a collection of artistic images of virtual cats that are used in a game on Ethereum that allows players to purchase, collect and breed their virtual cats. Since gaining in popularity in 2017, the total volume exchanged daily has grown to $10 million dollars in March 2021. 
 
@@ -75,7 +75,7 @@ Model Validation and Results:
 
 •	Y_pred vs y_actual   R2 score
 
-•	Oversold and undersold vs rarity   ')
+•	Oversold and undersold vs rarity """)
 
 
 
