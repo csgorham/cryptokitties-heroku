@@ -21,7 +21,7 @@ endpoint = st.sidebar.selectbox("Navigation", [ "Model", "Price Arbitrage" ], in
 
 if endpoint == 'Model':
 
-	st.header(f"Introduction")
+	st.title(f"Introduction")
 
 	st.markdown("""Non-fungible tokens (NFTs) are a modern digital investment vehicle based on the Ethereum blockchain. These assets have been a thing for a while now, but many of us are just catching on – and wondering what is driving the prices sky-high. NFTs, sold on online marketplaces (a most common one being OpenSea Marketplace), are organized into collections which fall into a variety of categories including art, collectible, games, metaverse, and utility. 
 
@@ -29,17 +29,17 @@ The most popular NFT collection (by number of assets) is known as ‘CryptoKitti
 
 All CryptoKitties belong to a particular ‘generation,’ those that were “magically” created belong to Generation 0 – any new CryptoKitty NFTs are created by breeding and belong  to “Generation +1” of the oldest parent. There are currently over 2 million cats with the highest generation of 4593. """)
 
-	st.subheader(f"Business Objective ")
+	st.header(f"Business Objective ")
 
 	st.markdown("""This machine learning project focuses on the price prediction of individual Generation 0 CryptoKitties. I have developed a model to predict the price of virtual cats that have been previously sold, based on factors including the rarity of their attributes and their age (token ID). 
 
 Having achieved a reasonably high degree of accuracy, we suggest looking at where the model has over-predicted or under-predicted the price as special cases that lend themselves to arbitrage (buying under-priced assets and subsequently marking them up, and vice versa – selling over-priced assets prior to their presumed loss of value).""")
 
-	st.subheader(f"Generation 0")
+	st.header(f"Generation 0")
 
 	st.markdown("""We have decided to focus on Generation 0 kitties since they are considered the most valuable and are valued as a cryptocurrency in their own right, on account of their generation being the only one with a capped number of cats at 50,000. This makes them particularly rare, and in demand. """)
 
-	st.subheader(f"Cattribute Rarity, Cooldown and Exclusive Cats")
+	st.header(f"Cattribute Rarity, Cooldown and Exclusive Cats")
 
 	st.markdown("""Being an NFT, which is a unit of data stored on the blockchain that certifies a digital asset to be unique and not interchangeable, each cat has its own set of ‘cat attributes’ or ‘cattributes.’ Cattributes describe physical features of the virtual cats, such as: fur type, pattern, eye color and shape, background color, mouth style, eyebrows and even mood. Each attribute has a different frequency of realization within each generation of collection, and the combination of them are indicative of the rarity of the NFT. 
 
@@ -50,9 +50,9 @@ Other factors that contribute to the value of a cryptokitty are instances where 
 A final factor in assessing the value of a cryptokitty is what is known as its “cooldown period.” This is the period of time that it will take a particular cat to recover after breeding, to breed again. “Virgin” cats are highly valued, since each time that a cat breeds its “cooldown period” becomes longer. """)
 
 
-	st.header(f"Project Description") 
+	st.title(f"Project Description") 
 
-	st.subheader(""" **Data Ingestion:**  """)
+	st.header(""" **Data Ingestion:**  """)
 
 	st.markdown("""(1)	Sale price and NFT trait information has been collected using the OpenSea API Asset request function.
 
@@ -62,7 +62,7 @@ A final factor in assessing the value of a cryptokitty is what is known as its �
 
 	st.image('./graphics/cleaned_data.png')
 
-	st.subheader("""** Machine Learning Model:**""")
+	st.header("""** Machine Learning Model:**""")
 
 	st.markdown("""Random Forest Regression (RFR), from the sklearn toolkit, has been chosen to perform price prediction on the set of all generation-0 kitties (currently 36,258 exist). Random Forest is a supervised learning algorithm that operates by constructing multiple decision trees and outputting the mean prediction of the individual trees. Thanks to weighting multiple decision trees, RFR achieves high accuracies and generally produces better results than linear regression models or single decision trees.
 
@@ -71,15 +71,15 @@ A final factor in assessing the value of a cryptokitty is what is known as its �
 	st.image('./graphics/pipe.png')
 
 
-	st.subheader(f"Model Validation and Results:") 
+	st.header(f"Model Validation and Results:") 
 
-	st.markdown("** Feature Importance**")
+	st.subheader("<h1 style='text-align: center; color: red;'>Feature Importance</h1>", unsafe_allow_html=True)
 	st.image('./graphics/features.png')
 
-	st.markdown("** R2 Score**")
+	st.subheader("<h1 style='text-align: center; color: red;'>R2 Score</h1>", unsafe_allow_html=True)
 	st.image('./graphics/R2.png')
 
-	st.markdown("** Oversold/Undersold vs. Rarity**")
+	st.markdown("<h1 style='text-align: center; color: red;'>Oversold/Undersold vs. Rarity</h1>", unsafe_allow_html=True)
 	st.image('./graphics/overallrarityVSprediction.png')
 
 
