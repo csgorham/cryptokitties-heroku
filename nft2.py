@@ -79,7 +79,7 @@ A final factor in assessing the value of a cryptokitty is what is known as its â
 	st.subheader("R2 Score")
 	st.image('./graphics/R2.png')
 
-	st.markdown("Oversold/Undersold vs. Rarity")
+	st.subheader("Oversold/Undersold vs. Rarity")
 	st.image('./graphics/overallrarityVSprediction.png')
 
 
