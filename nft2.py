@@ -73,13 +73,13 @@ A final factor in assessing the value of a cryptokitty is what is known as its â
 
 	st.header(f"Model Validation and Results:") 
 
-	st.subheader("<h1 style='text-align: center; color: red;'>Feature Importance</h1>", unsafe_allow_html=True)
+	st.subheader("Feature Importance")
 	st.image('./graphics/features.png')
 
-	st.subheader("<h1 style='text-align: center; color: red;'>R2 Score</h1>", unsafe_allow_html=True)
+	st.subheader("R2 Score")
 	st.image('./graphics/R2.png')
 
-	st.markdown("<h1 style='text-align: center; color: red;'>Oversold/Undersold vs. Rarity</h1>", unsafe_allow_html=True)
+	st.markdown("Oversold/Undersold vs. Rarity")
 	st.image('./graphics/overallrarityVSprediction.png')
 
 
