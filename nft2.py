@@ -74,7 +74,7 @@ A final factor in assessing the value of a cryptokitty is what is known as its â
 	st.subheader(f"Model Validation and Results:") 
 
 	st.markdown("** Feature Importance**")
-	#st.image(list(asset["image_url_png"]))
+	st.image('./graphics/features.png')
 
 	st.markdown("** R2 Score**")
 	st.image('./graphics/R2.png')
