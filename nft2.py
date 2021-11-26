@@ -93,6 +93,18 @@ if endpoint == 'Cattribute Results':
         st.subheader("Eye Shape")
         st.image('./graphics/eyeshape_r2.png')
 
+#        st.subheader("Eye Color")
+#        st.image('./graphics/eyecolor_r2.png')
+
+#        st.subheader("Mouth Type")
+#        st.image('./graphics/mouth_r2.png')
+
+        st.subheader("Fur Style")
+        st.image('./graphics/fur_r2.png')
+
+        st.subheader("Pattern Style")
+        st.image('./graphics/pattern_r2.png')
+
 if endpoint == 'Price Arbitrage Downloads':
 	ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
 	idx = modelresults[(modelresults['ID_token'] == ids)].index
