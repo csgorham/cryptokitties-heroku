@@ -16,7 +16,7 @@ def render_asset(asset):
 	st.write(list(asset["image_url_png"]))
 	st.write('Mouth Type: ' + asset['mouth_value']  + '   Rarity: ' + asset['mouth_rarity'].astype(str) )
 
-endpoint = st.sidebar.selectbox("Navigation", [ "Model", "Price Arbitrage" ], index = 0) 
+endpoint = st.sidebar.selectbox("Navigation", [ "Model", "Cattribute Results", "Price Arbitrage Downloads" ], index = 0) 
 
 
 if endpoint == 'Model':
@@ -82,8 +82,18 @@ A final factor in assessing the value of a cryptokitty is what is known as its â
 	st.subheader("Oversold/Undersold vs. Rarity")
 	st.image('./graphics/overallrarityVSprediction.png')
 
+if endpoint == 'Cattribute Results':
 
-if endpoint == 'Price Arbitrage':
+        st.subheader("Virginity")
+        st.image('./graphics/virginity_r2.png')
+
+        st.subheader("Cooldown Index")
+        st.image('./graphics/cooldown_r2.png')
+
+        st.subheader("Eye Shape")
+        st.image('./graphics/eyeshape_r2.png')
+
+if endpoint == 'Price Arbitrage Downloads':
 	ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
 	idx = modelresults[(modelresults['ID_token'] == ids)].index
 	asset = modelresults.iloc[idx]
