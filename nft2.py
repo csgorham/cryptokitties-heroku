@@ -93,11 +93,11 @@ if endpoint == 'Cattribute Results':
         st.subheader("Eye Shape")
         st.image('./graphics/eyeshape_r2.png')
 
-#        st.subheader("Eye Color")
-#        st.image('./graphics/eyecolor_r2.png')
+        st.subheader("Eye Color")
+        st.image('./graphics/eyecolour_r2.png')
 
-#        st.subheader("Mouth Type")
-#        st.image('./graphics/mouth_r2.png')
+        st.subheader("Mouth Type")
+        st.image('./graphics/mouth_r2.png')
 
         st.subheader("Fur Style")
         st.image('./graphics/fur_r2.png')
