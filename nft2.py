@@ -76,34 +76,54 @@ A final factor in assessing the value of a cryptokitty is what is known as its â
 	st.subheader("Feature Importance")
 	st.image('./graphics/features.png')
 
-	st.subheader("R2 Score")
-	st.image('./graphics/R2.png')
+        st.subheader("R2 Scores - Virgin/Non-Virgin Cats")
+        st.image('./graphics/virginity_r2.png')
 
 	st.subheader("Oversold/Undersold vs. Rarity")
 	st.image('./graphics/overallrarityVSprediction.png')
 
 if endpoint == 'Cattribute Results':
+	virginity = st.sidebar.selectbox("Has Bred?", [ "Virgin", "Non-Virgin"], index = 0)
 
-        st.subheader("Virginity")
-        st.image('./graphics/virginity_r2.png')
+	if virginity == "Virgin":
 
-        st.subheader("Cooldown Index")
-        st.image('./graphics/cooldown_r2.png')
+	        st.subheader("Cooldown Index")
+        	st.image('./graphics/virgin_cooldown_r2.png')
 
-        st.subheader("Eye Shape")
-        st.image('./graphics/eyeshape_r2.png')
+        	st.subheader("Eye Shape")
+        	st.image('./graphics/virgin_eyeshape_r2.png')
 
-        st.subheader("Eye Color")
-        st.image('./graphics/eyecolour_r2.png')
+        	st.subheader("Eye Color")
+        	st.image('./graphics/virgin_eyecolour_r2.png')
 
-        st.subheader("Mouth Type")
-        st.image('./graphics/mouth_r2.png')
+        	st.subheader("Mouth Type")
+        	st.image('./graphics/virgin_mouth_r2.png')
 
-        st.subheader("Fur Style")
-        st.image('./graphics/fur_r2.png')
+        	st.subheader("Fur Style")
+        	st.image('./graphics/virgin_fur_r2.png')
 
-        st.subheader("Pattern Style")
-        st.image('./graphics/pattern_r2.png')
+        	st.subheader("Pattern Style")
+        	st.image('./graphics/virgin_pattern_r2.png')
+
+        if virginity == "Non-Virgin":
+
+                st.subheader("Cooldown Index")
+                st.image('./graphics/nonvirgin_cooldown_r2.png')
+
+                st.subheader("Eye Shape")
+                st.image('./graphics/nonvirgin_eyeshape_r2.png')
+
+                st.subheader("Eye Color")
+                st.image('./graphics/nonvirgin_eyecolour_r2.png')
+
+                st.subheader("Mouth Type")
+                st.image('./graphics/nonvirgin_mouth_r2.png')
+
+                st.subheader("Fur Style")
+                st.image('./graphics/nonvirgin_fur_r2.png')
+
+                st.subheader("Pattern Style")
+                st.image('./graphics/nonvirgin_pattern_r2.png')
 
 if endpoint == 'Price Arbitrage Downloads':
 	ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
