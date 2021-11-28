@@ -5,10 +5,9 @@ from web3 import Web3
 
 #offset, order_by, order_direction 
 
-offset = 0 
-data = {'assets':[]}
+#offset = 0 
+#data = {'assets':[]}
 
-modelresults=pd.read_csv("./results.csv")
 
 def render_asset(asset):
 	st.markdown('Cryptokitty   ID: ' , asset['ID_token'].astype(str))
@@ -123,10 +122,27 @@ if endpoint == 'Cattribute Results':
 		st.subheader("Pattern Style")
 		st.image('./graphics/nonvirgins_pattern_r2.png')
 
+def get_table_download_link_csv(df):
+    #csv = df.to_csv(index=False)
+    csv = df.to_csv().encode()
+    #b64 = base64.b64encode(csv.encode()).decode() 
+    b64 = base64.b64encode(csv).decode()
+    href = f'<a href="data:file/csv;base64,{b64}" download="captura.csv" target="_blank">Download csv file</a>'
+    return href
+
 if endpoint == 'Price Arbitrage Downloads':
+	modelresults=pd.read_csv("./results.csv")
+	virgins_underpriced = pd.read_csv('./virgins_underpriced.csv')
+	virgins_overpriced = pd.read_csv('./virgins_overpriced.csv')
+        nonvirgins_underpriced = pd.read_csv('./nonvirgins_underpriced.csv')
+        nonvirgins_overpriced = pd.read_csv('./nonvirgins_overpriced.csv')
+
 	ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
 	idx = modelresults[(modelresults['ID_token'] == ids)].index
 	asset = modelresults.iloc[idx]
 	render_asset(asset)
+	
+	st.markdown(get_table_download_link_csv(virgins_underpriced), unsafe_allow_html=True)
+
 
 
