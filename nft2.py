@@ -159,12 +159,12 @@ if endpoint == 'Price Arbitrage Downloads':
 	#asset = modelresults.iloc[idx]
 	#render_asset(asset)
 	
-	if pricing == 'Overpriced' && virginity == 'Virgin':
+	if pricing == 'Overpriced' and virginity == 'Virgin':
 		st.markdown(get_table_download_link_csv(virgins_overpriced), unsafe_allow_html=True)
-	elif pricing == 'Underpriced' && virginity == 'Virgin':
+	elif pricing == 'Underpriced' and  virginity == 'Virgin':
 		st.markdown(get_table_download_link_csv(virgins_underpriced), unsafe_allow_html=True)
-	elif pricing == 'Underpriced' && virginity == 'Non-Virgin':
+	elif pricing == 'Underpriced' and virginity == 'Non-Virgin':
 		st.markdown(get_table_download_link_csv(nonvirgins_underpriced), unsafe_allow_html=True)
-	elif pricing == 'Overpriced' && virginity == 'Non-Virgin':
+	elif pricing == 'Overpriced' and virginity == 'Non-Virgin':
 		st.markdown(get_table_download_link_csv(nonvirgins_overpriced), unsafe_allow_html=True)
 
