@@ -152,6 +152,7 @@ if endpoint == 'Price Arbitrage Downloads':
 	nonvirgins_underpriced.name='Underpriced Non-Virgins'
 	nonvirgins_overpriced.name='Overpriced Non-Virgins'
 
+	
 	pricing = st.sidebar.selectbox("Has Bred?", [ "Overpriced", "Underpriced"], index = 0)
 	virginity = st.sidebar.selectbox("Has Bred?", [ "Virgin", "Non-Virgin"], index = 0)
 	#ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
