@@ -170,16 +170,26 @@ if endpoint == 'Price Arbitrage Downloads':
 		st.markdown(get_table_download_link_csv(virgins_overpriced), unsafe_allow_html=True)
 		
 		virgins_overpriced['opensea'] = virgins_overpriced['opensea'].apply(make_clickable)
+		virgins_overpriced['image_url_png'] = virgins_overpriced['image_url_png'].apply(make_clickable)
 		virgins_overpriced= virgins_overpriced.to_html(escape=False)	
 		#virgins_overpriced.style.format({'opensea': make_clickable})
 		st.write(virgins_overpriced, unsafe_allow_html=True)
 	elif pricing == 'Underpriced' and  virginity == 'Virgin':
 		st.markdown(get_table_download_link_csv(virgins_underpriced), unsafe_allow_html=True)
-		st.dataframe(virgins_underpriced)
+
+		virgins_underpriced['opensea'] = virgins_underpriced['opensea'].apply(make_clickable)
+		virgins_underpriced['image_url_png'] = virgins_underpriced['image_url_png'].apply(make_clickable)
+		st.write(virgins_underpriced, unsafe_allow_html=True)
 	elif pricing == 'Underpriced' and virginity == 'Non-Virgin':
 		st.markdown(get_table_download_link_csv(nonvirgins_underpriced), unsafe_allow_html=True)
-		st.dataframe(nonvirgins_underpriced)
+
+		nonvirgins_underpriced['opensea'] = nonvirgins_underpriced['opensea'].apply(make_clickable)
+		nonvirgins_underpriced['image_url_png'] = nonvirgins_underpriced['image_url_png'].apply(make_clickable)
+		st.write(nonvirgins_underpriced, unsafe_allow_html=True)
 	elif pricing == 'Overpriced' and virginity == 'Non-Virgin':
 		st.markdown(get_table_download_link_csv(nonvirgins_overpriced), unsafe_allow_html=True)
-		st.dataframe(nonvirgins_overpriced)
+
+		nonvirgins_overpriced['opensea'] = nonvirgins_overpriced['opensea'].apply(make_clickable)
+		nonvirgins_overpriced['image_url_png'] = nonvirgins_overpriced['image_url_png'].apply(make_clickable)
+		st.write(nonvirgins_overpriced, unsafe_allow_html=True)
 
