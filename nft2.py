@@ -123,6 +123,12 @@ if endpoint == 'Cattribute Results':
 		st.subheader("Pattern Style")
 		st.image('./graphics/nonvirgins_pattern_r2.png')
 
+def make_clickable(link):
+    # target _blank to open new window
+    # extract clickable text to display for your link
+    text = link.split('=')[1]
+    return f'<a target="_blank" href="{link}">{text}</a>'
+
 def get_table_download_link_csv(df):
     csv = df.to_csv(index=False)
     #b64 = base64.b64encode(csv.encode()).decode() 
@@ -162,6 +168,9 @@ if endpoint == 'Price Arbitrage Downloads':
 	
 	if pricing == 'Overpriced' and virginity == 'Virgin':
 		st.markdown(get_table_download_link_csv(virgins_overpriced), unsafe_allow_html=True)
+		
+		virgins_overpriced['opensea'] = virgins_overpriced['opensea'].apply(make_clickable)
+		
 		st.dataframe(virgins_overpriced)
 	elif pricing == 'Underpriced' and  virginity == 'Virgin':
 		st.markdown(get_table_download_link_csv(virgins_underpriced), unsafe_allow_html=True)
