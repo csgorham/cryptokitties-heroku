@@ -2,6 +2,7 @@ import streamlit as st
 import requests, json
 import pandas as pd 
 from web3 import Web3
+import base64
 
 #offset, order_by, order_direction 
 
