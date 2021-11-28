@@ -73,8 +73,8 @@ A final factor in assessing the value of a cryptokitty is what is known as its â
 
 	st.header(f"Model Validation and Results:") 
 
-	st.subheader("Feature Importance")
-	st.image('./graphics/features.png')
+	#st.subheader("Feature Importance")
+	#st.image('./graphics/features.png')
 
 	st.subheader("R2 Scores - Virgin/Non-Virgin Cats")
 	st.image('./graphics/virginity_r2.png')
