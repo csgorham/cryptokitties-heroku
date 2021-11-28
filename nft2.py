@@ -126,8 +126,8 @@ if endpoint == 'Cattribute Results':
 def make_clickable(link):
     # target _blank to open new window
     # extract clickable text to display for your link
-    text = link.split('=')[1]
-    return f'<a target="_blank" href="{link}">{text}</a>'
+    #text = link.split('=')[1]
+    return f'<a target="_blank" href="{link}"</a>'
 
 def get_table_download_link_csv(df):
     csv = df.to_csv(index=False)
