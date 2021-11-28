@@ -129,7 +129,7 @@ def get_table_download_link_csv(df):
     b64 = base64.b64encode(csv.encode()).decode()
 
 
-    href = f'<a href="data:file/csv;base64,{b64}" download={df.name} +".csv" target="_blank">Download {df.name} csv file</a>'
+    href = f'<a href="data:file/csv;base64,{b64}" download="Underpriced_Virgins.csv" target="_blank">Download {df.name} csv file</a>'
     return href
 
 if endpoint == 'Price Arbitrage Downloads':
