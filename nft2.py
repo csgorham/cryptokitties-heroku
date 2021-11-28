@@ -79,8 +79,6 @@ A final factor in assessing the value of a cryptokitty is what is known as its â
 	st.subheader("R2 Scores - Virgin/Non-Virgin Cats")
 	st.image('./graphics/virginity_r2.png')
 
-	st.subheader("Oversold/Undersold vs. Rarity")
-	st.image('./graphics/overallrarityVSprediction.png')
 
 if endpoint == 'Cattribute Results':
 	virginity = st.sidebar.selectbox("Has Bred?", [ "Virgin", "Non-Virgin"], index = 0)
@@ -88,42 +86,42 @@ if endpoint == 'Cattribute Results':
 	if virginity == "Virgin":
 
 	        st.subheader("Cooldown Index")
-        	st.image('./graphics/virgin_cooldown_r2.png')
+        	st.image('./graphics/virgins_cooldown_r2.png')
 
         	st.subheader("Eye Shape")
-        	st.image('./graphics/virgin_eyeshape_r2.png')
+        	st.image('./graphics/virgins_eyeshape_r2.png')
 
         	st.subheader("Eye Color")
-        	st.image('./graphics/virgin_eyecolour_r2.png')
+        	st.image('./graphics/virgins_eyecolour_r2.png')
 
         	st.subheader("Mouth Type")
-        	st.image('./graphics/virgin_mouth_r2.png')
+        	st.image('./graphics/virgins_mouth_r2.png')
 
         	st.subheader("Fur Style")
-        	st.image('./graphics/virgin_fur_r2.png')
+        	st.image('./graphics/virgins_fur_r2.png')
 
         	st.subheader("Pattern Style")
-        	st.image('./graphics/virgin_pattern_r2.png')
+        	st.image('./graphics/virgins_pattern_r2.png')
 
 	if virginity == "Non-Virgin":
 
 		st.subheader("Cooldown Index")
-		st.image('./graphics/nonvirgin_cooldown_r2.png')
+		st.image('./graphics/nonvirgins_cooldown_r2.png')
 
 		st.subheader("Eye Shape")
-		st.image('./graphics/nonvirgin_eyeshape_r2.png')
+		st.image('./graphics/nonvirgins_eyeshape_r2.png')
 
 		st.subheader("Eye Color")
-		st.image('./graphics/nonvirgin_eyecolour_r2.png')
+		st.image('./graphics/nonvirgins_eyecolour_r2.png')
 
 		st.subheader("Mouth Type")
-		st.image('./graphics/nonvirgin_mouth_r2.png')
+		st.image('./graphics/nonvirgins_mouth_r2.png')
 
 		st.subheader("Fur Style")
-		st.image('./graphics/nonvirgin_fur_r2.png')
+		st.image('./graphics/nonvirgins_fur_r2.png')
 
 		st.subheader("Pattern Style")
-		st.image('./graphics/nonvirgin_pattern_r2.png')
+		st.image('./graphics/nonvirgins_pattern_r2.png')
 
 if endpoint == 'Price Arbitrage Downloads':
 	ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
