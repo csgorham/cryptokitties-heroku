@@ -169,10 +169,10 @@ if endpoint == 'Price Arbitrage Downloads':
 	if pricing == 'Overpriced' and virginity == 'Virgin':
 		st.markdown(get_table_download_link_csv(virgins_overpriced), unsafe_allow_html=True)
 		
-		#virgins_overpriced['opensea'] = virgins_overpriced['opensea'].apply(make_clickable)
+		virgins_overpriced['opensea'] = virgins_overpriced['opensea'].apply(make_clickable).to_html(escape=False)
 		#virgins_overpriced= virgins_overpriced.to_html(escape=False)	
-		virgins_overpriced.style.format({'opensea': make_clickable})
-		st.write(virgins_overpriced)
+		#virgins_overpriced.style.format({'opensea': make_clickable})
+		st.write(virgins_overpriced, unsafe_allow_html=True)
 	elif pricing == 'Underpriced' and  virginity == 'Virgin':
 		st.markdown(get_table_download_link_csv(virgins_underpriced), unsafe_allow_html=True)
 		st.dataframe(virgins_underpriced)
