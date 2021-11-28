@@ -127,7 +127,7 @@ def make_clickable(link):
     # target _blank to open new window
     # extract clickable text to display for your link
     #text = link.split('=')[1]
-    return f'<a href="{link}"> {link}</a>'
+    return f'<a target="_blank"  href="{link}"> {link}</a>'
 
 def get_table_download_link_csv(df):
     csv = df.to_csv(index=False)
