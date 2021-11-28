@@ -140,7 +140,7 @@ if endpoint == 'Price Arbitrage Downloads':
 	nonvirgins_underpriced = pd.read_csv('./nonvirgins_underpriced.csv')
 	nonvirgins_overpriced = pd.read_csv('./nonvirgins_overpriced.csv')
 
-        virgins_underpriced.name='Underpriced Virgins'
+	virgins_underpriced.name='Underpriced Virgins'
 	virgins_overpriced.name='Overpriced Virgins'
 	nonvirgins_underpriced.name='Underpriced Non-Virgins'
 	nonvirgins_overpriced.name='Overpriced Non-Virgins'
