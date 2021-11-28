@@ -110,7 +110,7 @@ if endpoint == 'Cattribute Results':
 		st.subheader("Cooldown Index")
 		st.image('./graphics/nonvirgin_cooldown_r2.png')
 
- 		st.subheader("Eye Shape")
+		st.subheader("Eye Shape")
 		st.image('./graphics/nonvirgin_eyeshape_r2.png')
 
 		st.subheader("Eye Color")
