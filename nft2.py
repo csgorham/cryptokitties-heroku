@@ -134,8 +134,8 @@ if endpoint == 'Price Arbitrage Downloads':
 	modelresults=pd.read_csv("./results.csv")
 	virgins_underpriced = pd.read_csv('./virgins_underpriced.csv')
 	virgins_overpriced = pd.read_csv('./virgins_overpriced.csv')
-        nonvirgins_underpriced = pd.read_csv('./nonvirgins_underpriced.csv')
-        nonvirgins_overpriced = pd.read_csv('./nonvirgins_overpriced.csv')
+	nonvirgins_underpriced = pd.read_csv('./nonvirgins_underpriced.csv')
+	nonvirgins_overpriced = pd.read_csv('./nonvirgins_overpriced.csv')
 
 	ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
 	idx = modelresults[(modelresults['ID_token'] == ids)].index
