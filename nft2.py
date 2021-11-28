@@ -129,7 +129,15 @@ def get_table_download_link_csv(df):
     b64 = base64.b64encode(csv.encode()).decode()
 
 
-    href = f'<a href="data:file/csv;base64,{b64}" download="Underpriced_Virgins.csv" target="_blank">Download {df.name} csv file</a>'
+    if df.name == 'Underpriced Virgins':
+        href = f'<a href="data:file/csv;base64,{b64}" download="Underpriced_Virgins.csv" target="_blank">Download {df.name} csv file</a>'
+    elif df.name == 'Overpriced Virgins':
+        href = f'<a href="data:file/csv;base64,{b64}" download="Overpriced_Virgins.csv" target="_blank">Download {df.name} csv file</a>'
+    elif df.name == 'Underpriced Non-Virgins':
+        href = f'<a href="data:file/csv;base64,{b64}" download="Underpriced_Non_Virgins.csv" target="_blank">Download {df.name} csv file</a>'
+    elif df.name == 'Overpriced Non-Virgins':
+        href = f'<a href="data:file/csv;base64,{b64}" download="Overpriced_Non_Virgins.csv" target="_blank">Download {df.name} csv file</a>'
+ 
     return href
 
 if endpoint == 'Price Arbitrage Downloads':
@@ -150,6 +158,7 @@ if endpoint == 'Price Arbitrage Downloads':
 	render_asset(asset)
 	
 	st.markdown(get_table_download_link_csv(virgins_underpriced), unsafe_allow_html=True)
-
-
+	st.markdown(get_table_download_link_csv(virgins_overpriced), unsafe_allow_html=True)
+	st.markdown(get_table_download_link_csv(nonvirgins_underpriced), unsafe_allow_html=True)
+	st.markdown(get_table_download_link_csv(nonvirgins_overpriced), unsafe_allow_html=True)
 
