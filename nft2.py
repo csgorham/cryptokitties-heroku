@@ -152,13 +152,19 @@ if endpoint == 'Price Arbitrage Downloads':
 	nonvirgins_underpriced.name='Underpriced Non-Virgins'
 	nonvirgins_overpriced.name='Overpriced Non-Virgins'
 
-	ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
-	idx = modelresults[(modelresults['ID_token'] == ids)].index
-	asset = modelresults.iloc[idx]
-	render_asset(asset)
+	pricing = st.sidebar.selectbox("Has Bred?", [ "Overpriced", "Underpriced"], index = 0)
+	virginity = st.sidebar.selectbox("Has Bred?", [ "Virgin", "Non-Virgin"], index = 0)
+	#ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
+	#idx = modelresults[(modelresults['ID_token'] == ids)].index
+	#asset = modelresults.iloc[idx]
+	#render_asset(asset)
 	
+	if pricing == 'Overpriced' & virginity == 'Virgin':
+		st.markdown(get_table_download_link_csv(virgins_overpriced), unsafe_allow_html=True)
+	elif pricing == 'Underpriced' & virginity == 'Virgin':
 	st.markdown(get_table_download_link_csv(virgins_underpriced), unsafe_allow_html=True)
-	st.markdown(get_table_download_link_csv(virgins_overpriced), unsafe_allow_html=True)
-	st.markdown(get_table_download_link_csv(nonvirgins_underpriced), unsafe_allow_html=True)
-	st.markdown(get_table_download_link_csv(nonvirgins_overpriced), unsafe_allow_html=True)
+	elif pricing == 'Underpriced' & virginity == 'Non-Virgin':
+		st.markdown(get_table_download_link_csv(nonvirgins_underpriced), unsafe_allow_html=True)
+	elif pricing == 'Overpriced' & virginity == 'Non-Virgin':
+		st.markdown(get_table_download_link_csv(nonvirgins_overpriced), unsafe_allow_html=True)
 
