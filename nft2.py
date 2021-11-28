@@ -135,10 +135,15 @@ def get_table_download_link_csv(df):
 
 if endpoint == 'Price Arbitrage Downloads':
 	modelresults=pd.read_csv("./results.csv")
-	virgins_underpriced = pd.read_csv('./virgins_underpriced.csv', name = 'Virgins Underpriced')
+	virgins_underpriced = pd.read_csv('./virgins_underpriced.csv')
 	virgins_overpriced = pd.read_csv('./virgins_overpriced.csv')
 	nonvirgins_underpriced = pd.read_csv('./nonvirgins_underpriced.csv')
 	nonvirgins_overpriced = pd.read_csv('./nonvirgins_overpriced.csv')
+
+        virgins_underpriced.name='Underpriced Virgins'
+        virgins_overpriced.name='Overpriced Virgins'
+        nonvirgins_underpriced.name='Underpriced Non-Virgins'
+        nonvirgins_overpriced.name='Overpriced Non-Virgins'
 
 	ids = st.sidebar.selectbox('ID token', list(modelresults['ID_token'].sort_values()))
 	idx = modelresults[(modelresults['ID_token'] == ids)].index
