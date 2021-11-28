@@ -161,10 +161,14 @@ if endpoint == 'Price Arbitrage Downloads':
 	
 	if pricing == 'Overpriced' and virginity == 'Virgin':
 		st.markdown(get_table_download_link_csv(virgins_overpriced), unsafe_allow_html=True)
+		st.write(virgins_overpriced.head())
 	elif pricing == 'Underpriced' and  virginity == 'Virgin':
 		st.markdown(get_table_download_link_csv(virgins_underpriced), unsafe_allow_html=True)
+		st.write(virgins_underpriced.head())
 	elif pricing == 'Underpriced' and virginity == 'Non-Virgin':
 		st.markdown(get_table_download_link_csv(nonvirgins_underpriced), unsafe_allow_html=True)
+		st.write(nonvirgins_underpriced.head())
 	elif pricing == 'Overpriced' and virginity == 'Non-Virgin':
 		st.markdown(get_table_download_link_csv(nonvirgins_overpriced), unsafe_allow_html=True)
+		st.write(nonvirgins_overpriced.head())
 
